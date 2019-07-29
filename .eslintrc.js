@@ -19,5 +19,8 @@ module.exports = {
         flatTernaryExpressions: true
       }
     ]
+  },
+  env: {
+    jest: true
   }
 };

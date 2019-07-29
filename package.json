@@ -7,7 +7,7 @@
     "serve": "npm run build && cross-env NODE_ENV=release node ./dist/index.js",
     "start": "nodemon --inspect --exec 'cross-env BABEL_ENV=debug NODE_ENV=debug babel-node --nolazy ./src/index.js'",
     "lint": "eslint .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rimraf coverage && jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,15 @@
     "@babel/core": "^7.5.5",
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.2",
+    "babel-jest": "^24.8.0",
     "cross-env": "^5.2.0",
     "eslint": "^6.1.0",
     "eslint-config-alloy": "^2.0.5",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
     "nodemon": "^1.19.1",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3"
