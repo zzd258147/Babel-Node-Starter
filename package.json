@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "babel-node-starter",
   "scripts": {
+    "build": "rimraf dist && cross-env BABEL_ENV=release babel src --out-dir dist",
+    "serve": "npm run build && cross-env NODE_ENV=release node ./dist/index.js",
+    "start": "nodemon --inspect --exec 'cross-env BABEL_ENV=debug NODE_ENV=debug babel-node --nolazy ./src/index.js'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -12,5 +15,14 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "cross-env": "^5.2.0",
+    "nodemon": "^1.19.1",
+    "rimraf": "^2.6.3"
   }
 }
