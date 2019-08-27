@@ -26,7 +26,10 @@
     "babel-eslint": "^10.0.3",
     "eslint": "^6.2.2",
     "eslint-config-alloy": "^2.0.5",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
     "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
     "rimraf": "^3.0.0"
   }
 }
