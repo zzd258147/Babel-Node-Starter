@@ -6,6 +6,7 @@
     "build": "rimraf dist && cross-env BABEL_ENV=production babel src --out-dir dist",
     "serve": "cross-env NODE_ENV=production node ./dist/index.js",
     "start": "nodemon --inspect --exec 'cross-env BABEL_ENV=development NODE_ENV=development babel-node --nolazy ./src/index.js'",
+    "lint": "eslint .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,9 @@
     "@babel/core": "^7.6.0",
     "@babel/node": "^7.6.1",
     "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-config-alloy": "^3.0.0",
     "nodemon": "^1.19.2",
     "rimraf": "^3.0.0"
   }
