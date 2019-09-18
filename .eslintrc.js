@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['alloy'],
+  extends: ['alloy', 'plugin:prettier/recommended'],
   env: {
     // 这里填入你的项目用到的环境
     // 它们预定义了不同环境的全局变量，比如：
